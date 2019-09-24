@@ -1,7 +1,7 @@
 # SlimmyAPI
 A Simple API for unified acess to GitHub and GitLab APIs.
 
-for testing try host/users/{user}/{repoName}
+for testing try host/api/{user}/{repoName}
 
 NB: github access might be forbidden in later cases due to quote limit aginst an ip (solution : use some proxy in m/c to bypass it) and for now i have not used access token.
 
