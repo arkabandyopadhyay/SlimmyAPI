@@ -22,9 +22,9 @@ public abstract class APIWorkFlow implements WorkFlow{
 	public CompletableFuture<List<List<RepositoryVO>>> execute(String userName, String projectName, String ownerType){
 		if(projectName == null || projectName.isEmpty()) 
 			throw new IllegalArgumentException("projectName is invalid");
-		log.info("started fetching user details");
+		log.info("started fetching user details"+this.getClass().getName());
 		List<BaseUserVO> resultMap = fetchAllUser(userName);
-		log.info("started fetching project details");
+		log.info("started fetching project details"+this.getClass().getName());
 		return CompletableFuture.completedFuture(this.executeAll(resultMap, projectName, ownerType));
 	}
 

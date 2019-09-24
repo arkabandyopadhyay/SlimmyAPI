@@ -52,7 +52,7 @@ public class WrapperController {
 	@GetMapping("/{user}/{repoName}")
 	public ResponseEntity<List> fetchRepo(@PathVariable(value = "user") String userName,@PathVariable(value="repoName",required = false) String repoName,@RequestParam(name = "type",required = false) final String type) {
 		CompletableFuture<List<List<RepositoryVO>>> githubResult = gitHubAPIWorkFlow.execute(userName, repoName, type);
-		CompletableFuture<List<List<RepositoryVO>>> gitlabResult = gitHubAPIWorkFlow.execute(userName, repoName, type);
+		CompletableFuture<List<List<RepositoryVO>>> gitlabResult = gitLabAPIWorkFlow.execute(userName, repoName, type);
 		log.info("started fetchRepo");
 		CompletableFuture.allOf(githubResult, gitlabResult).join();
 		
