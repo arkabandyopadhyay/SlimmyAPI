@@ -22,4 +22,6 @@ Going Ahead.
 
 4> Pluggable API framework to be developed using runtime annotation thing.
 
+5> Solving paging issu with rest api from github and gitlab i.e. by default it provides a page size of 30.
+
 
