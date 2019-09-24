@@ -14,19 +14,19 @@ public class GitHubUserVO extends BaseUserVO {
 		this.company = company;
 		this.location = location;
 		this.created_at = created_at;
-		this.repositoryName = "GitHub";
-		this.userName = login;
+		this.repositoryname = "GitHub";
+		this.username = login;
 	}
 	
 	public GitHubUserVO() {
-		this.repositoryName = "GitHub";
+		this.repositoryname = "GitHub";
 	}
 	public String getLogin() {
 		return login;
 	}
 	public void setLogin(String login) {
 		this.login = login;
-		this.userName = login;
+		this.username = login;
 	}
 	public String getEmail() {
 		return email;

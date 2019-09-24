@@ -2,25 +2,34 @@ package com.sapi.common;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BaseUserVO {
 
-	protected String repositoryName;
-	protected String userName;
+	protected String repositoryname;
+	protected String username;
 	protected Long id;
+	protected String login;
 	
 	public Long getId() {
 		return id;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
 	
-	public String getRepositoryName() {
-		return repositoryName;
+	public String getRepositoryname() {
+		return repositoryname;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 	
 	public BaseUserVO() {
@@ -28,7 +37,7 @@ public class BaseUserVO {
 	}
 	@Override
 	public String toString() {
-		return "BaseUserVO [repositoryName=" + repositoryName + ", userName=" + userName + "]";
+		return "BaseUserVO [repositoryName=" + repositoryname + ", userName=" + username + "]";
 	}
 	
 }

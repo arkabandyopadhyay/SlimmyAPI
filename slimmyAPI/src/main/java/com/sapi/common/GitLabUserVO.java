@@ -9,12 +9,19 @@ public class GitLabUserVO extends BaseUserVO{
 	private String web_url;
 	private String name;
 	
+	
+	
+	public GitLabUserVO() {
+		super();
+	}
+
+
 	public GitLabUserVO(String avatar_url, String web_url, String name) {
 		super();
 		this.avatar_url = avatar_url;
 		this.web_url = web_url;
 		this.name = name;
-		this.repositoryName = "GitLab";
+		this.repositoryname = "GitLab";
 	}
 	
 	
